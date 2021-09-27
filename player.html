@@ -1,0 +1,233 @@
+<!--
+ * @Author: 黄灿民
+ * @Date: 2021-05-20 12:10:39
+ * @LastEditTime: 2021-08-02 23:01:48
+ * @LastEditors: 黄灿民
+ * @Description: 
+ * @FilePath: \3871-javascript-music-player\source-code\code110\player.html
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/recommendList.css">
+    <link rel="stylesheet" href="./css/player.css">
+    <script src="./assets/iconfont.js"></script>
+</head>
+
+<body>
+    <div class="wrapper d-flex  flex-column">
+        <header class="header">
+            <a href="#/home"> 推荐页</a>
+        </header>
+        <section id="app" class="content">
+            <!-- 此处为中间内容，通过 js 动态生成 -->
+            <div class="player-background-image">
+                <div class="player-content d-flex">
+                    <div class="player-album-cover d-flex">
+                        <!-- 歌曲封面 -->
+                        <div class="ablum">
+                            <div class="cover">
+                                <img src="https://th.bing.com/th/id/R7466240255fa48164e1d741fb8b29893?rik=qd9WWhLotZqIAg&riu=http%3a%2f%2fpicture.ik123.com%2fuploads%2fallimg%2f160906%2f3-160Z6154A8.jpg&ehk=T2cuZ%2fECZd2tvUCSXRgW2e2axgZ8c4rM2GQpotzo3Ec%3d&risl=&pid=ImgRaw"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="player-lyric d-flex align-items-start">
+                        <!-- 歌曲和歌词信息 -->
+                        <h3 class="song-name">
+                            老街
+                        </h3>
+                        <div class="song-info">
+                            <span class="song-album">专辑：小黄</span>
+                            <span class="singer">歌手：李荣浩</span>
+                            <span class="song-sour">来源：小黄</span>
+                        </div>
+                        <div class="lyric-wrap">
+                            <p class="song-lyric-item"></p>
+
+                            <p class="song-lyric-item">一张褪色的照片</p>
+
+                            <p class="song-lyric-item">好像带给我一点点怀念</p>
+
+                            <p class="song-lyric-item">巷尾老爷爷卖的热汤面</p>
+
+                            <p class="song-lyric-item">味道弥漫过旧旧的后院</p>
+
+                            <p class="song-lyric-item">流浪猫睡熟在摇晃秋千</p>
+
+                            <p class="song-lyric-item">夕阳照了一遍他眯着眼</p>
+
+                            <p class="song-lyric-item">那张同桌寄的明信片</p>
+
+                            <p class="song-lyric-item">安静的躺在课桌的里面</p>
+
+                            <p class="song-lyric-item">快要过完的春天</p>
+
+                            <p class="song-lyric-item">还有雕刻着图案的门帘</p>
+
+                            <p class="song-lyric-item">窄窄的长长的过道两边</p>
+
+                            <p class="song-lyric-item">老房子依然升起了炊烟</p>
+
+                            <p class="song-lyric-item">刚刚下完了小雨的季节</p>
+
+                            <p class="song-lyric-item">爸妈又一起走过的老街</p>
+
+                            <p class="song-lyric-item">记不得哪年的哪一天</p>
+
+                            <p class="song-lyric-item">很漫长又很短暂的岁月</p>
+
+                            <p class="song-lyric-item">现在已经回不去</p>
+
+                            <p class="song-lyric-item">早已流逝的光阴</p>
+
+                            <p class="song-lyric-item">手里的那一张渐渐模糊不清的车票</p>
+
+                            <p class="song-lyric-item">成了回忆的信号</p>
+
+                            <p class="song-lyric-item">忘不掉的是什么我也不知道</p>
+
+                            <p class="song-lyric-item">想不起当年模样</p>
+
+                            <p class="song-lyric-item">看也看不到 去也去不了的地方</p>
+
+                            <p class="song-lyric-item">也许那老街的腔调是属于我的忧伤</p>
+
+                            <p class="song-lyric-item">嘴角那点微笑越来越勉强</p>
+
+                            <p class="song-lyric-item"></p>
+
+                            <p class="song-lyric-item">忘不掉的是什么我也不知道</p>
+
+                            <p class="song-lyric-item">放不下熟悉片段</p>
+
+                            <p class="song-lyric-item">回头望一眼 已经很多年的时间</p>
+
+                            <p class="song-lyric-item">透过手指间看着天</p>
+
+                            <p class="song-lyric-item">我又回到那老街</p>
+
+                            <p class="song-lyric-item">靠在你们身边渐行渐远</p>
+
+                            <p class="song-lyric-item"></p>
+
+                            <p class="song-lyric-item">快要过完的春天</p>
+
+                            <p class="song-lyric-item">还有雕刻着图案的门帘</p>
+
+                            <p class="song-lyric-item">窄窄的长长的过道两边</p>
+
+                            <p class="song-lyric-item">老房子依然升起了炊烟</p>
+
+                            <p class="song-lyric-item">刚刚下完了小雨的季节</p>
+
+                            <p class="song-lyric-item">爸妈又一起走过的老街</p>
+
+                            <p class="song-lyric-item">记不得哪年的哪一天</p>
+
+                            <p class="song-lyric-item">很漫长又很短暂的岁月</p>
+
+                            <p class="song-lyric-item">现在已经回不去</p>
+
+                            <p class="song-lyric-item">早已流逝的光阴</p>
+
+                            <p class="song-lyric-item">手里的那一张渐渐模糊不清的车票</p>
+
+                            <p class="song-lyric-item">成了回忆的信号</p>
+
+                            <p class="song-lyric-item">忘不掉的是什么我也不知道</p>
+
+                            <p class="song-lyric-item">想不起当年模样</p>
+
+                            <p class="song-lyric-item">看也看不到 去也去不了的地方</p>
+
+                            <p class="song-lyric-item">也许那老街的腔调是属于我的忧伤</p>
+
+                            <p class="song-lyric-item">嘴角那点微笑越来越勉强</p>
+
+                            <p class="song-lyric-item">忘不掉的是什么我也不知道</p>
+
+                            <p class="song-lyric-item">放不下熟悉片段</p>
+
+                            <p class="song-lyric-item">回头望一眼 已经很多年的时间</p>
+
+                            <p class="song-lyric-item">透过手指间看着天</p>
+
+                            <p class="song-lyric-item">我又回到那老街</p>
+
+                            <p class="song-lyric-item">靠在你们身边渐行渐远</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="player-control d-flex justify-content-start ">
+            <div class="player-control-songinfo d-flex justify-content-start">
+                <div class="img ">
+                    <img src="https://th.bing.com/th/id/R7466240255fa48164e1d741fb8b29893?rik=qd9WWhLotZqIAg&riu=http%3a%2f%2fpicture.ik123.com%2fuploads%2fallimg%2f160906%2f3-160Z6154A8.jpg&ehk=T2cuZ%2fECZd2tvUCSXRgW2e2axgZ8c4rM2GQpotzo3Ec%3d&risl=&pid=ImgRaw"
+                        alt="">
+                </div>
+                <div class="songinfo d-flex flex-column align-items-start">
+                    <span class="songname">歌曲一</span>
+                    <span class="single-text-omitted singer">歌手2323232323232</span>
+                </div>
+            </div>
+            <div class="player-control-unit d-flex justify-content-between">
+                <div class="control">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-shangyiqu"></use>
+                    </svg>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-zanting"></use>
+                    </svg>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-xiayiqu"></use>
+                    </svg>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div class="song-progress d-flex justify-content-between">
+                        <span class="current-time">00:00</span>
+                        <div class="progress" id='progress-bar'>
+                            <div class="progress-bar"></div>
+                            <div class="progress-dot"></div>
+                        </div>
+                        <span class="total-time">00:00</span>
+                    </div>
+                    <div class="volume d-flex">
+                        <svg class="icon volume-icon" aria-hidden="true">
+                            <use xlink:href="#icon-yinliang"></use>
+                        </svg>
+                        <div class="progress" id='volume-bar'>
+                            <div class="progress-bar"></div>
+                            <div class="progress-dot"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-liebiaoxunhuan"></use>
+                    </svg>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-bofangliebiao"></use>
+                    </svg>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <canvas id="canvas"></canvas>
+</body>
+
+<script src="./js/util/util.js" type="module"></script>
+
+</html>
