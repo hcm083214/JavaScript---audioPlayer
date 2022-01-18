@@ -1,5 +1,8 @@
 // ajax.js
 const BASE_URL = 'http://localhost:3000';
+const processEnv = process.env || 'development';
+import { dataBlocks, songInfo, lyric, playlist } from "./api.js";
+
 export default function Ajax({ //请求参数配置
     method = "GET",  //默认为'get'请求
     url,
@@ -11,10 +14,10 @@ export default function Ajax({ //请求参数配置
         xhr.onload = function () {
             resolve(JSON.parse(xhr.response))
         }
-        xhr.onerror = function(){
+        xhr.onerror = function () {
             console.log(xhr)
-            if(xhr.status == 0){
-                
+            if (xhr.status == 0) {
+
             }
         }
         xhr.send(JSON.stringify(data));
@@ -26,10 +29,16 @@ export default function Ajax({ //请求参数配置
  * @param {*}
  * @return {*}
  */
- export async function getBannerList(){
-    const result = Ajax({
-        url:`/homepage/block/page`
-    })
+export async function getBannerList() {
+    let result;
+    if (processEnv === 'demo') {
+        result = dataBlocks;
+    } else {
+        result = Ajax({
+            url: `/homepage/block/page`
+        })
+    }
+
     return result;
 }
 
@@ -38,10 +47,18 @@ export default function Ajax({ //请求参数配置
  * @param {*} musicId
  * @return {*}
  */
- export async function getRecommendList(musicId){
-    const result = Ajax({
-        url:`/playlist/detail?id=${musicId}`
-    })
+export async function getRecommendList(musicId) {
+    let result;
+    if (processEnv === 'demo') {
+        result = playlist;
+    } else {
+        result = Ajax({
+            url: `/playlist/detail?id=${musicId}`
+        })
+    }
+    // const result = Ajax({
+    //     url: `/playlist/detail?id=${musicId}`
+    // })
     return result;
 }
 
@@ -50,7 +67,7 @@ export default function Ajax({ //请求参数配置
  * @param {*} musicId
  * @return {*}
  */
- export async function getAudioSrc(musicId) {
+export async function getAudioSrc(musicId) {
     let result = `https://music.163.com/song/media/outer/url?id=${musicId}`;
     // try {
     //     result = Ajax({
@@ -67,10 +84,18 @@ export default function Ajax({ //请求参数配置
  * @param {*} musicId
  * @return {*}
  */
- export async function getAudioInfo(musicId) {
-    const result = Ajax({
-        url: `/song/detail?ids=${musicId}`
-    });
+export async function getAudioInfo(musicId) {
+    let result;
+    if (processEnv === 'demo') {
+        result = songInfo;
+    } else {
+        result = Ajax({
+            url: `/song/detail?ids=${musicId}`
+        })
+    }
+    // const result = Ajax({
+    //     url: `/song/detail?ids=${musicId}`
+    // });
     return result;
 }
 
@@ -79,9 +104,17 @@ export default function Ajax({ //请求参数配置
  * @param {*} musicId
  * @return {*}
  */
- export async function getAudioLyric(musicId){
-    const result = Ajax({
-        url:`/lyric?id=${musicId}`
-    })
+export async function getAudioLyric(musicId) {
+    let result;
+    if (processEnv === 'demo') {
+        result = lyric;
+    } else {
+        result = Ajax({
+            url: `/lyric?id=${musicId}`
+        })
+    }
+    // const result = Ajax({
+    //     url: `/lyric?id=${musicId}`
+    // })
     return result;
 }

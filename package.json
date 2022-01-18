@@ -4,8 +4,8 @@
   "description": "Javascript从零构建音乐播放器",
   "main": "webpack.config.js",
   "scripts": {
-    "dev":"webpack --mode=development --watch",
-    "build":"webpack --mode=production"
+    "dev": "webpack --mode=development --watch",
+    "build": "webpack  --mode=production"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/hcm083214/JavaScript---audioPlayer/issues"
   },
-  "homepage": "https://github.com/hcm083214/JavaScript---audioPlayer#readme"
+  "homepage": "https://github.com/hcm083214/JavaScript---audioPlayer#readme",
+  "devDependencies": {
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1"
+  }
 }
