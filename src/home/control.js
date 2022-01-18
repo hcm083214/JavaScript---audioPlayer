@@ -1,11 +1,3 @@
-/*
- * @Author: 黄灿民
- * @Date: 2021-05-30 18:20:47
- * @LastEditTime: 2021-08-20 19:32:42
- * @LastEditors: 黄灿民
- * @Description: 
- * @FilePath: \3871-javascript-music-player\source-code\code140\js\home\control.js
- */
 import { getAudioSrc, getAudioInfo } from "../service/ajax.js";
 import { formatSongTime } from "../util/util.js";
 import { reactive } from "../util/reactive.js";

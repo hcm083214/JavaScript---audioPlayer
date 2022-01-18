@@ -1,11 +1,3 @@
-/*
- * @Author: 黄灿民
- * @Date: 2021-04-16 21:48:43
- * @LastEditTime: 2021-08-03 18:34:33
- * @LastEditors: 黄灿民
- * @Description: 
- * @FilePath: \3871-javascript-music-player\source-code\code120\js\index.js
- */
 // window.addEventListener('load', () => {
 //     console.log('load')
 //     const script = document.createElement('SCRIPT');

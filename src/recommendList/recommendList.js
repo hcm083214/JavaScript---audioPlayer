@@ -1,12 +1,3 @@
-/*
- * @Author: 黄灿民
- * @Date: 2021-04-17 13:45:47
- * @LastEditTime: 2021-08-18 16:28:50
- * @LastEditors: 黄灿民
- * @Description: 
- * @FilePath: \3871-javascript-music-player\source-code\code140\js\recommendList\recommendList.js
- */
-
 import {getRecommendList} from "../service/ajax.js";
 import { reactive } from "../util/reactive.js";
 import { initPlayerControl,PlayerCoverBackMode,playerListRender } from "../home/control.js";

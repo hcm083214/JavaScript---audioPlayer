@@ -1,12 +1,3 @@
-/*
- * @Author: 黄灿民
- * @Date: 2021-04-16 21:53:16
- * @LastEditTime: 2021-08-01 11:28:51
- * @LastEditors: 黄灿民
- * @Description: 
- * @FilePath: \3871-javascript-music-player\source-code\code70\js\home\home.js
- */
-
 `document.querySelector('#app').innerHTML = '111';`
 
 // home.js

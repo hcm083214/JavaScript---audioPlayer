@@ -1,12 +1,3 @@
-/*
- * @Author: 黄灿民
- * @Date: 2021-06-02 20:01:59
- * @LastEditTime: 2021-08-17 22:18:23
- * @LastEditors: 黄灿民
- * @Description: 
- * @FilePath: \3871-javascript-music-player\source-code\code130\js\player\player.js
- */
-
 import { PlayerCoverBackMode } from "../home/control.js";
 import { getAudioInfo, getAudioLyric } from "../service/ajax.js";
 

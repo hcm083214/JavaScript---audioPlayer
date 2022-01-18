@@ -1,11 +1,3 @@
-/*
- * @Author: 黄灿民
- * @Date: 2021-04-16 22:08:46
- * @LastEditTime: 2021-08-17 20:45:25
- * @LastEditors: 黄灿民
- * @Description: 
- * @FilePath: \3871-javascript-music-player\source-code\code130\js\util\util.js
- */
 export function debounce(fn, times, isImmediately = true) {
     //防抖函数
     let timer = null;

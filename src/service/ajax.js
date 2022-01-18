@@ -1,11 +1,3 @@
-/*
- * @Author: 黄灿民
- * @Date: 2021-04-16 21:59:12
- * @LastEditTime: 2021-08-08 16:17:19
- * @LastEditors: 黄灿民
- * @Description: 
- * @FilePath: \3871-javascript-music-player\source-code\code130\js\service\ajax.js
- */
 // ajax.js
 const BASE_URL = 'http://localhost:3000';
 export default function Ajax({ //请求参数配置

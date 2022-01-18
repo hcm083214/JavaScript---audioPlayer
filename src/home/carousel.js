@@ -1,11 +1,3 @@
-/*
- * @Author: 黄灿民
- * @Date: 2021-07-28 12:46:42
- * @LastEditTime: 2021-08-08 16:12:14
- * @LastEditors: 黄灿民
- * @Description: 
- * @FilePath: \3871-javascript-music-player\source-code\code130\js\home\carousel.js
- */
 import { debounce } from '../util/util.js';
 
 // 切换箭头为静态 HTML 样式，无需根据图片数量动态生成。
