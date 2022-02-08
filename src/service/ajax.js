@@ -1,5 +1,5 @@
 // ajax.js
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'http://localhost:4000';
 const processEnv = process.env || 'development';
 import { dataBlocks, songInfo, lyric, playlist } from "./api.js";
 
